@@ -1,0 +1,15 @@
+@startuml
+title JackInSpace
+
+class CameraMover {
+    - Camera targetCamera
+    + void JackIn()
+    + void JackOut(Transform dst)
+}
+
+class BezierCurve <<static>> {
+    + static Vector3 QuadroBezierCurve(Vector3[] controllPoints, float t)
+    + static Vector3 CubicBezierCurve(Vector3[] controllPoints, float t)
+}
+
+@enduml
