@@ -5,7 +5,13 @@ public class GameManager : MonoBehaviour
     [SerializeField] CameraMover mover;
     [SerializeField] Transform[] dstTransforms;
 
-    int index = 1;
+    int index = 0;
+    int indices;
+
+    void Start()
+    {
+        indices = dstTransforms.Length;
+    }
 
     void Update()
     {
@@ -16,8 +22,8 @@ public class GameManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.I))
         {
+            index = (index + 1) % indices;
             mover.JackIn(dstTransforms[index]);
-            index = (index + 1) % 2;
         }
     }
 }
