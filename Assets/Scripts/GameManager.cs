@@ -20,7 +20,13 @@ public class GameManager : MonoBehaviour
             mover.JackOut();
         }
 
-        if (Input.GetKeyDown(KeyCode.I))
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            index = (index + 2) % indices;
+            mover.JackIn(dstTransforms[index]);
+        }
+
+        if (Input.GetKeyDown(KeyCode.R))
         {
             index = (index + 1) % indices;
             mover.JackIn(dstTransforms[index]);
