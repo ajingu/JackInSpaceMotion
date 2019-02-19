@@ -3,13 +3,13 @@ title JackInSpace
 
 class CameraMover {
     - Camera targetCamera
-    + void JackIn()
-    + void JackOut(Transform dst)
+    + void JackIn(Vector3 dstPos)
+    + void JackOut()
 }
 
 class BezierCurve <<static>> {
-    + static Vector3 QuadroBezierCurve(Vector3[] controllPoints, float t)
-    + static Vector3 CubicBezierCurve(Vector3[] controllPoints, float t)
+    + static Vector3 QuadroBezierCurve(Vector3 p0, Vector3 p1, Vector3 p2, float t)
+    + static Vector3 CubicBezierCurve(Vector3 p0, Vector3 p1, Vector3 p2, Vector3 p3, float t)
 }
 
 @enduml
